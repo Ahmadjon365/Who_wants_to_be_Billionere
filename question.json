@@ -1,0 +1,212 @@
+[
+  {
+    "question": "Python dasturlash tilining asoschisi kim?",
+    "answers": [
+      {
+        "key": "Guido van Rossum",
+        "isTrue": true
+      },
+      {
+        "key": "Monty Python",
+        "isTrue": false
+      },
+      {
+        "key": "Stephen Hawking",
+        "isTrue": false
+      },
+      {
+        "key": "Pavel Durov",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "Quyidagilar qanday nomlanadi: +, 0, 'Integer'?",
+    "answers": [
+      {
+        "key": "Integer, operator, string",
+        "isTrue": false
+      },
+      {
+        "key": "String, operator, integer",
+        "isTrue": false
+      },
+      {
+        "key": "Operator, string, integer",
+        "isTrue": false
+      },
+      {
+        "key": "Operator, integer, string",
+        "isTrue": true
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "",
+    "answers": [
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      },
+      {
+        "key": "",
+        "isTrue": false
+      }
+    ]
+  }
+]
