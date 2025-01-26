@@ -9,7 +9,6 @@ def save_players(players):
         json.dump(players, file, ensure_ascii=False, indent=4)
 
 
-# O'yin oynash funksiyasi
 def play_game(questions, players, player_name):
     score = 0
     help_used = False  # Yordam bir marta ishlatilishi uchun bayroq
@@ -17,12 +16,13 @@ def play_game(questions, players, player_name):
     for question in questions:
         print(f"\nSavol: {question['question']}")
 
+        # Javoblarni ko'rsatish
         for i, answer in enumerate(question['answers'], start=1):
             print(f"{i}) {answer['key']}")
         print("0 - Yordam (faqat bir marta foydalanish mumkin)")
 
-        valid_choice = False  # To'g'ri tanlovni tekshirish bayrog'i
-        while not valid_choice:  # Agar foydalanuvchi noto'g'ri javob kiritsa, savolni qaytadan ko'rsatish
+        valid_choice = False  # Foydalanuvchi to'g'ri javob bermaguncha, savolni qayta ko'rsatamiz
+        while not valid_choice:  # Foydalanuvchi to'g'ri javob tanlashga qadar davom etadi
             try:
                 choice = int(input("Javobni tanlang (raqam): ")) - 1
 
@@ -37,25 +37,27 @@ def play_game(questions, players, player_name):
                         print(f"{i}) {answer['key']}")
                     continue  # Savolni qayta ko‘rsatish uchun davom etamiz
 
+                # To'g'ri javobni tekshirish
                 if 0 <= choice < len(question['answers']):
-                    valid_choice = True  # To'g'ri tanlovni kiritganida tsiklni tugatamiz
-
-                    # To'g'ri javobni tekshirish
                     if question['answers'][choice]['isTrue']:
                         print("To'g'ri javob!\n")
                         score += 1
+                        valid_choice = True  # To'g'ri javob tanlanganidan so'ng tsiklni to'xtatish
                     else:
                         print("Noto'g'ri javob! O'yin tugadi.\n")
-                        break  # Xato bo'lsa o'yinni tugatamiz
+                        valid_choice = True  # Xato javob bo'lsa, tsiklni to'xtatamiz va o'yin tugaydi
+                        break  # O'yinni tugatish
                 else:
-                    print("Iltimos, faqat 0 dan 4 gacha bo'lgan raqam kiriting.")
+                    print("Iltimos, faqat raqam tanlang!\n")
+
             except ValueError:
                 print("Iltimos, faqat raqam kiriting!\n")
 
-    else:
-        print(f"O'yin tugadi, {player_name}, sizning ochkoyingiz: {score}\n")
-        update_player_score(players, player_name, score)  # O'yinchining ballini yangilash
-        print(f"Eng yuqori natija: {get_highest_score(players)}")
+    # O'yin tugadi, ochkolarni yangilash
+    print(f"O'yin tugadi, {player_name}, sizning ochkoyingiz: {score}")
+    update_player_score(players, player_name, score)  # O'yinchining ballini yangilash
+    player, score_p = get_highest_score(players)
+    print(f"Eng yuqori natija: {player} - {score_p}")
 
 
 # Reytinglarni ko'rsatish funksiyasi

@@ -1,17 +1,17 @@
 [
     {
         "name": "Alisher",
-        "played": 2,
-        "score": 5
+        "played": 1,
+        "score": 3
     },
     {
         "name": "Farid",
-        "played": 4,
-        "score": 7
+        "played": 3,
+        "score": 5
     },
     {
-        "name": "Sherali",
-        "played": 2,
-        "score": 8
+        "name": "Ahmadjon",
+        "played": 1,
+        "score": 4
     }
 ]

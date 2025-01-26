@@ -29,7 +29,11 @@ def update_player_score(players, player_name, score):
 # Eng yuqori ballni topish
 def get_highest_score(players):
     highest_score = 0
+    highest_player = ""  # Eng yuqori ballni egallagan o'yinchining ismi
+
     for player in players:
         if player["score"] > highest_score:
             highest_score = player["score"]
-    return highest_score
+            highest_player = player["name"]
+
+    return highest_player, highest_score

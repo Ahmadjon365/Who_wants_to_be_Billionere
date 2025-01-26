@@ -4,7 +4,6 @@ import json
 QUESTIONS_FILE = "question.json"
 PLAYERS_FILE = "players.json"
 
-
 # Savollarni fayldan o'qish
 def load_questions(file_name=QUESTIONS_FILE):
     try:
@@ -14,7 +13,6 @@ def load_questions(file_name=QUESTIONS_FILE):
         print("Savollar fayli topilmadi!")
         return []
 
-
 # O'yinchilarni fayldan o'qish
 def load_players():
     try:
@@ -23,14 +21,13 @@ def load_players():
     except FileNotFoundError:
         return []  # Fayl topilmasa bo'sh ro'yxat qaytariladi
 
-
 # Asosiy dastur
 def main():
     players = load_players()
     questions = load_questions()
 
     while True:
-        print("\nKim millioner bo'lishni istaydi testiga xush kelibsiz!\n")
+        print("Kim millioner bo'lishni istaydi testiga xush kelibsiz!\n")
         print("Buyuruqni tanlang:")
         print("1 - Test")
         print("2 - Reyting")
