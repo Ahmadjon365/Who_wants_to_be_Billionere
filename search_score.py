@@ -1,39 +1,48 @@
 import json
 
+QUESTIONS_FILE = "question.json"
 PLAYERS_FILE = "players.json"
 
+# Savollarni fayldan o'qish
+def load_questions():
+    try:
+        with open(QUESTIONS_FILE, "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print("Savollar fayli topilmadi!")
+        return []
 
-# O'yinchi ma'lumotlarini faylga saqlash
+# O'yinchilarni fayldan o'qish
+def load_players():
+    try:
+        with open(PLAYERS_FILE, "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+
+# O'yinchilarni faylga saqlash
 def save_players(players):
     with open(PLAYERS_FILE, "w", encoding="utf-8") as file:
         json.dump(players, file, ensure_ascii=False, indent=4)
 
-
 # O'yinchi ma'lumotlarini yangilash
 def update_player_score(players, player_name, score):
-    # O'yinchini ro'yxatdan izlash
     player = next((p for p in players if p["name"] == player_name), None)
-
     if player:
-        # Agar o'yinchi mavjud bo'lsa, uning o'ynaganlar soni va eng yaxshi ballini yangilash
         player["played"] += 1
         player["score"] = max(player["score"], score)
     else:
-        # Yangi o'yinchi qo'shish
         players.append({"name": player_name, "played": 1, "score": score})
-
-    # O'yinchilar ro'yxatini faylga saqlash
     save_players(players)
 
-
-# Eng yuqori ballni topish
-def get_highest_score(players):
-    highest_score = 0
-    highest_player = ""  # Eng yuqori ballni egallagan o'yinchining ismi
-
-    for player in players:
-        if player["score"] > highest_score:
-            highest_score = player["score"]
-            highest_player = player["name"]
-
-    return highest_player, highest_score
+# Foydalanuvchidan valid tanlov olish
+def get_valid_choice(prompt, max_choice):
+    while True:
+        try:
+            choice = int(input(prompt))
+            if 0 <= choice <= max_choice:
+                return choice
+            else:
+                print(f"Iltimos, 0 dan {max_choice} gacha raqam kiriting!")
+        except ValueError:
+            print("Faqat raqam kiriting!")
