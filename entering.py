@@ -5,34 +5,38 @@ QUESTIONS_FILE = "question.json"
 PLAYERS_FILE = "players.json"
 
 
-def load_questions():
-    with open(QUESTIONS_FILE, "r", encoding="utf-8") as file:
-        return json.load(file)
+# Savollarni fayldan o'qish
+def load_questions(file_name=QUESTIONS_FILE):
+    try:
+        with open(file_name, "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print("Savollar fayli topilmadi!")
+        return []
 
 
+# O'yinchilarni fayldan o'qish
 def load_players():
     try:
         with open(PLAYERS_FILE, "r", encoding="utf-8") as file:
             return json.load(file)
     except FileNotFoundError:
-        return {}
+        return []  # Fayl topilmasa bo'sh ro'yxat qaytariladi
 
 
+# Asosiy dastur
 def main():
-    questions = load_questions()
     players = load_players()
+    questions = load_questions()
 
     while True:
-        choice = input(int(input("""Kim millioner bo'lishni istaydi testiga xush kelibsiz!
+        print("\nKim millioner bo'lishni istaydi testiga xush kelibsiz!\n")
+        print("Buyuruqni tanlang:")
+        print("1 - Test")
+        print("2 - Reyting")
+        print("\n0 - Chiqish")
 
-    Buyuruqni tanlang:
-
-    1 - Test
-    2 - Reyting
-
-    0 - Chiqish
-
-    >>> """)))
+        choice = input("\nTanlovingizni kiriting: ")
 
         if choice == "1":
             player_name = input("Ismingizni kiriting: ")

@@ -1,11 +1,28 @@
 [
   {
-    "question": "Python dasturlash tilining asoschisi kim?",
+    "question": "Python dasturlash tili qaysi yilda yaratilgan?",
     "answers": [
       {
-        "key": "Guido van Rossum",
+        "key": "1991",
+        "isTrue": false
+      },
+      {
+        "key": "1989",
         "isTrue": true
       },
+      {
+        "key": "2000",
+        "isTrue": false
+      },
+      {
+        "key": "1995",
+        "isTrue": false
+      }
+    ]
+  },
+  {
+    "question": "Python dasturlash tili asoschisi kim?",
+    "answers": [
       {
         "key": "Monty Python",
         "isTrue": false
@@ -15,196 +32,179 @@
         "isTrue": false
       },
       {
+        "key": "Guido van Rossum",
+        "isTrue": true
+      },
+      {
         "key": "Pavel Durov",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "Quyidagilar qanday nomlanadi: +, 0, 'Integer'?",
+    "question": "Python'da 'list' ma'lumot turi uchun element qo'shish qaysi metod yordamida amalga oshiriladi?",
     "answers": [
       {
-        "key": "Integer, operator, string",
+        "key": "add()",
         "isTrue": false
       },
       {
-        "key": "String, operator, integer",
-        "isTrue": false
-      },
-      {
-        "key": "Operator, string, integer",
-        "isTrue": false
-      },
-      {
-        "key": "Operator, integer, string",
+        "key": "append()",
         "isTrue": true
-      }
-    ]
-  },
-  {
-    "question": "",
-    "answers": [
+      },
       {
-        "key": "",
+        "key": "insert()",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "extend()",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'da shartlarni tekshirish uchun qaysi kalit so'z ishlatiladi?",
     "answers": [
       {
-        "key": "",
+        "key": "if",
+        "isTrue": true
+      },
+      {
+        "key": "elif",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "else",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "case",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'dagi qaysi kalit so'z 'funksiyani' e'lon qilish uchun ishlatiladi?",
     "answers": [
       {
-        "key": "",
+        "key": "lambda",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "function",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
+        "key": "def",
+        "isTrue": true
       },
       {
-        "key": "",
+        "key": "class",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'da 'tuple' o'zgaruvchan ma'lumot turimi?",
     "answers": [
       {
-        "key": "",
+        "key": "Ha",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "Yo'q",
+        "isTrue": true
+      },
+      {
+        "key": "Ba'zida",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "Barcha javoblar noto'g'ri",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'dagi qaysi metod stringlarni katta harfga o'zgartiradi?",
     "answers": [
       {
-        "key": "",
+        "key": "capitalize()",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "upper()",
+        "isTrue": true
+      },
+      {
+        "key": "lower()",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "title()",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'da bo'linmaning qoldig'ini qaytaruvchi operator qaysi?",
     "answers": [
       {
-        "key": "",
+        "key": "/",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "%",
+        "isTrue": true
+      },
+      {
+        "key": "//",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "**",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'dagi 'set' ma'lumot turi nima uchun ishlatiladi?",
     "answers": [
       {
-        "key": "",
+        "key": "Noyob qiymatlarni saqlash uchun",
+        "isTrue": true
+      },
+      {
+        "key": "Kalit-qiymat juftliklari bilan ishlash uchun",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "Tartiblangan qiymatlarni saqlash uchun",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "Qayta o'zgartirib bo'lmaydigan qiymatlarni saqlash uchun",
         "isTrue": false
       }
     ]
   },
   {
-    "question": "",
+    "question": "Python'da 'len()' funksiyasi nima uchun ishlatiladi?",
     "answers": [
       {
-        "key": "",
+        "key": "O'zgaruvchini bo'shatish uchun",
         "isTrue": false
       },
       {
-        "key": "",
+        "key": "Elementlar sonini aniqlash uchun",
+        "isTrue": true
+      },
+      {
+        "key": "Listga element qo'shish uchun",
         "isTrue": false
       },
       {
-        "key": "",
-        "isTrue": false
-      },
-      {
-        "key": "",
+        "key": "Stringni katta harfga aylantirish uchun",
         "isTrue": false
       }
     ]
